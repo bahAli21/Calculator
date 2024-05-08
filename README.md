@@ -11,7 +11,7 @@ Ceci est une calculatrice simple développée en JavaScript, HTML et CSS, qui pe
 
 ## Capture d'écran 📸
 
-![Capture d'écran de la calculatrice](screenshot.png)
+![Capture d'écran de la calculatrice](calculator.png)
 
 ## Utilisation 🚀
 
