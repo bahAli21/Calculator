@@ -1,54 +1,69 @@
+// Sélection de l'élément d'entrée (input)
 let input = document.getElementById('inputBox');
-// Je récupère tous les boutons
+
+// Sélection de tous les boutons
 let buttons = document.querySelectorAll('button');
 
-let string = "";
+// Chaîne pour l'affichage à l'utilisateur
+let displayString = "";
+
+// Chaîne pour l'évaluation de l'expression arithmétique
+let evalString = "";
+
+// Variable pour suivre si le dernier bouton cliqué était "="
+let lastButtonEquals = false;
+
+// Conversion de la NodeList des boutons en un tableau (Array)
 let arr = Array.from(buttons);
+
+// Parcours de tous les boutons pour ajouter un écouteur d'événements
 arr.forEach(button => {
     button.addEventListener('click', (e) =>{
+
+        // Gestion des différents boutons cliqués
         if(e.target.innerHTML == '='){
-            e.preventDefault();
-            string = eval(string); //eval me permet d'evaluer une chaine de caractere et me retourne le resultat
-            input.value = string;
+            // Évaluation de la chaîne d'affichage
+            evalString = eval(displayString);
 
-            // Vérification de la longueur de la chaîne
-            if (string.length > 6 && string.length <=10) {
-                input.style.fontSize = '20px'; // je réduis la taille de la police si la longueur est superieur a 6 caractères
-            } else {
-                input.style.fontSize = '40px'; // je Garde la taille par défaut de la police si la longueur est différente
-            }
+            // Affichage du résultat dans l'élément input
+            input.value = evalString;
+
+            // Réinitialisation de la chaîne d'affichage pour permettre une nouvelle opération
+            displayString = "";
+
+            // Définir lastButtonEquals à true car le dernier bouton cliqué était "="
+            lastButtonEquals = true;
         }
-
         else if(e.target.innerHTML == 'AC'){
-            string = "";
-            input.value = string;
+            // Effacement complet : Réinitialisation des chaînes d'affichage et d'évaluation
+            displayString = "";
+            evalString = "";
+            input.value = displayString;
         }
         else if(e.target.innerHTML == 'D'){
-            string = string.substring(0, string.length-1); // Je retire un seul caractère
-            input.value = string;
-
-            // Vérification de la longueur de la chaîne
-            if (string.length > 6 && string.length <=10) {
-                input.style.fontSize = '20px'; // je réduis la taille de la police si la longueur est superieur a 6 caractères
-            } else {
-                input.style.fontSize = '40px'; // je Garde la taille par défaut de la police si la longueur est différente
-            }
+            // Suppression du dernier caractère de la chaîne d'affichage
+            displayString = displayString.substring(0, displayString.length-1);
+            input.value = displayString;
         }
         else{
-            if(string.length <= 10){
-                string += e.target.innerHTML; // Je fais une concaténation
-                input.value = string;
+            // Si le dernier bouton cliqué était "=", ou si la chaîne d'affichage est vide
+            if (lastButtonEquals || displayString === "") {
+                displayString = e.target.innerHTML; // Réinitialisation de la chaîne d'affichage
+                input.value = displayString;
+            } else {
+                displayString += e.target.innerHTML; // Concaténation du caractère du bouton cliqué à la chaîne d'affichage
+                input.value = displayString;
             }
 
+            // Réinitialise lastButtonEquals car un nouveau chiffre ou opérateur a été ajouté
+            lastButtonEquals = false;
         }
 
-        // Vérification de la longueur de la chaîne
-        if (string.length > 6 && string.length <=11) {
-            input.style.fontSize = '20px'; // je réduis la taille de la police si la longueur est superieur a 6 caractères
-        } else if(string.length > 11){
-            input.style.fontSize = '10px';
+        // Vérification de la longueur de la chaîne d'affichage pour ajuster la taille de la police
+        if (displayString.length > 6 && displayString.length < 9) {
+            input.style.fontSize = '30px'; // Réduire la taille de la police si la longueur est entre 6 et 9 caractères
         } else {
-            input.style.fontSize = '40px'; // je Garde la taille par défaut de la police si la longueur est différente
+            input.style.fontSize = '40px'; // Garde la taille par défaut de la police si la longueur est différente
         }
     })
 })
