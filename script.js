@@ -8,7 +8,7 @@ arr.forEach(button => {
     button.addEventListener('click', (e) =>{
         if(e.target.innerHTML == '='){
             e.preventDefault();
-            string = eval(string);
+            string = eval(string); //eval me permet d'evaluer une chaine de caractere et me retourne le resultat
             input.value = string;
 
             // Vérification de la longueur de la chaîne
