@@ -12,10 +12,8 @@ arr.forEach(button => {
             input.value = string;
 
             // Vérification de la longueur de la chaîne
-            if (string.length > 6 && string.length <=11) {
+            if (string.length > 6 && string.length <=10) {
                 input.style.fontSize = '20px'; // je réduis la taille de la police si la longueur est superieur a 6 caractères
-            } else if(string.length > 11){
-                input.style.fontSize = '10px';
             } else {
                 input.style.fontSize = '40px'; // je Garde la taille par défaut de la police si la longueur est différente
             }
@@ -32,14 +30,12 @@ arr.forEach(button => {
             // Vérification de la longueur de la chaîne
             if (string.length > 6 && string.length <=10) {
                 input.style.fontSize = '20px'; // je réduis la taille de la police si la longueur est superieur a 6 caractères
-            } else if(string.length > 10){
-                input.style.fontSize = '13px';
             } else {
                 input.style.fontSize = '40px'; // je Garde la taille par défaut de la police si la longueur est différente
             }
         }
         else{
-            if(string.length <= 14){
+            if(string.length <= 10){
                 string += e.target.innerHTML; // Je fais une concaténation
                 input.value = string;
             }
