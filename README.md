@@ -37,13 +37,9 @@ Ceci est une calculatrice simple développée en JavaScript, HTML et CSS, qui pe
 
 ## Auteur ✍️
 
-[Votre Nom](https://github.com/votre-utilisateur)
+[BAH Mamadou](https://bahali21.github.io/BAHMamadou/)
 
 ## Licence 📝
 
 Ce projet est sous licence [MIT License](LICENSE). N'hésitez pas à le modifier et à le distribuer comme bon vous semble.
-
----
-
-N'hésitez pas à contribuer en ouvrant une issue ou en soumettant une pull request pour proposer des améliorations ou de nouvelles fonctionnalités.
 
