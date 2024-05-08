@@ -102,11 +102,11 @@ footer  spa {
     color: #fff;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 900px) {
 
     .calculator{
-        width: 60%;
-        margin-left: 18%;
+        width: 70%;
+        margin-left: 12%;
         padding: 0;
 
     }
