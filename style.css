@@ -105,9 +105,9 @@ footer  spa {
 @media screen and (max-width: 900px) {
 
     .calculator{
-        width: 70%;
-        margin-left: 12%;
+        width: 90%;
         padding: 0;
+        margin-left: 5%;
 
     }
 
