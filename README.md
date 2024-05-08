@@ -1,4 +1,4 @@
-# Calculatrice JavaScript
+# Calculatrice JavaScript 🧮
 
 Ceci est une calculatrice simple développée en JavaScript, HTML et CSS, qui permet d'effectuer les opérations arithmétiques de base ainsi que d'autres fonctionnalités telles que l'effacement et le traitement des décimales.
 
@@ -9,11 +9,11 @@ Ceci est une calculatrice simple développée en JavaScript, HTML et CSS, qui pe
 - Effacement de l'écran avec AC (All Clear).
 - Effacement d'un caractère avec D (Delete).
 
-## Capture d'écran
+## Capture d'écran 📸
 
 ![Capture d'écran de la calculatrice](screenshot.png)
 
-## Utilisation
+## Utilisation 🚀
 
 1. Ouvrez `index.html` dans votre navigateur web.
 2. Utilisez les boutons numériques et les opérateurs pour effectuer des calculs.
@@ -21,7 +21,7 @@ Ceci est une calculatrice simple développée en JavaScript, HTML et CSS, qui pe
 4. Utilisez le bouton "AC" pour effacer l'écran et commencer un nouveau calcul.
 5. Utilisez le bouton "D" pour effacer le dernier caractère.
 
-## Opérations prises en charge
+## Opérations prises en charge ⚙️
 
 - Addition: `+`
 - Soustraction: `-`
@@ -29,20 +29,21 @@ Ceci est une calculatrice simple développée en JavaScript, HTML et CSS, qui pe
 - Division: `/`
 - Modulo: `%`
 
-## Technologies utilisées
+## Technologies utilisées 💻
 
 - HTML
 - CSS
 - JavaScript
 
-## Auteur
+## Auteur ✍️
 
 [Votre Nom](https://github.com/votre-utilisateur)
 
-## Licence
+## Licence 📝
 
 Ce projet est sous licence [MIT License](LICENSE). N'hésitez pas à le modifier et à le distribuer comme bon vous semble.
 
 ---
 
 N'hésitez pas à contribuer en ouvrant une issue ou en soumettant une pull request pour proposer des améliorations ou de nouvelles fonctionnalités.
+
